@@ -310,5 +310,3 @@ The supervisor:
 **Interpretation:** `io-worker` sleeps voluntarily for 200ms between writes. During sleep, its vruntime stays low. When it wakes, CFS schedules it ahead of the CPU-bound `cpu-worker`. This is the Linux scheduler's reward for I/O-bound behaviour: voluntary sleeps give the task priority on wakeup, ensuring responsiveness without starvation. `cpu-worker` is not starved either — it runs during `io-worker`'s sleep intervals.
 
 ---
-
-*Fill in the actual measured values from `scheduler_results.txt` after running `task5_scheduler_experiments.sh`.*
